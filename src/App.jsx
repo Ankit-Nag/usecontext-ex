@@ -20,8 +20,8 @@ export default function App() {
       <div className="container flex flex-center flex-col">
         <h1 className="app-header green">eCommerce</h1>
         <button
-          style={{position: "absolute", top: "1rem", right: "1rem"}}
-          className="btn btn-primary"
+          style={{position: "absolute", top: "1rem", right: "1rem", backgroundColor: "transparent", fontSize: "1.5rem"}}
+          className="btn"
           onClick={() => changeTheme(theme.name)}
         >
           {theme.name === "dark" ? "🔆" : "🌙"}
