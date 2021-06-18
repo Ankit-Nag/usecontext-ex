@@ -1,11 +1,8 @@
 export function ShowItem({ item }) {
-    return (
-      <div
-        key={item.id}
-        className="card"
-      >
-        <h2>{item.name}</h2>
-        <h2>₹{item.price}</h2>
-      </div>
-    );
-  }
+  return (
+    <div key={item.id} className="card mg-1">
+      <h2>{item.name}</h2>
+      <h3>Price: ₹{item.price}</h3>
+    </div>
+  );
+}

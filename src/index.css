@@ -22,3 +22,11 @@ code {
 li{
   list-style: none;
 }
+
+.app-header{
+  text-align: center;
+}
+
+.body{
+  padding: 0.5rem;
+}

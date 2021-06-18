@@ -1,32 +1,20 @@
-import React, { useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-const axios = { get: ()=> {},post: ()=>{}}
-
-export const CartContext = React.createContext();
-
+export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [loading, setLoading] = useState(false);
   const [itemsInCart, setItemsInCart] = useState([]);
+  // const [loading, setLoading] = useState(false);
 
+  // loading data on mount
   // useEffect(() => {
-  //   setLoading(true);
-  //   axios.get("/api/users").then((response) => {
-  //     setItemsInCart(response.data.item);
-  //     setLoading(false);
-  //   });
+  //   fetch("/pizza-ayo-ri").then((pizza) => setItemsInCart(pizza));
   // }, []);
 
- 
-  function saveItemsInCart() {
-    setLoading(true);
-    axios.post("/save-to-cart").then(response=>{
-      if(response.ok === true){
-        setItemsInCart(response.data.cartItem)
-        setLoading(false);
-      }
-    })
-  }
+  // saving user data
+  // function saveItemsInCart() {
+  //   setLoading(true);
+  // }
 
   return (
     <CartContext.Provider value={{ itemsInCart, setItemsInCart }}>
